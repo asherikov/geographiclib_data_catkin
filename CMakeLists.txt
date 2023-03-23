@@ -25,17 +25,17 @@ add_custom_target(
 
 add_custom_target(
     ${PROJECT_NAME}_geoids ALL
-    "${${PROJECT_NAME}_PATH}/geographiclib-get-geoids" -p "${${PROJECT_NAME}_CACHE_DIR}" egm96-5
+    "${${PROJECT_NAME}_PATH}/geographiclib-get-geoids" -p "${${PROJECT_NAME}_CACHE_DIR}" all
     DEPENDS ${PROJECT_NAME}_makedir
 )
 add_custom_target(
     ${PROJECT_NAME}_gravity ALL
-    "${${PROJECT_NAME}_PATH}/geographiclib-get-gravity" -p "${${PROJECT_NAME}_CACHE_DIR}" egm96
+    "${${PROJECT_NAME}_PATH}/geographiclib-get-gravity" -p "${${PROJECT_NAME}_CACHE_DIR}" all
     DEPENDS ${PROJECT_NAME}_makedir
 )
 add_custom_target(
     ${PROJECT_NAME}_magnetic ALL
-    "${${PROJECT_NAME}_PATH}/geographiclib-get-magnetic" -p "${${PROJECT_NAME}_CACHE_DIR}" emm2015
+    "${${PROJECT_NAME}_PATH}/geographiclib-get-magnetic" -p "${${PROJECT_NAME}_CACHE_DIR}" all
     DEPENDS ${PROJECT_NAME}_makedir
 )
 
